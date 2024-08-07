@@ -26,7 +26,7 @@ import { start } from "repl";
     const [isExpanded, setIsExpanded] = useState(false);
 
     return(
-        <div className={`flex flex-col justify-start h-screen ${!isExpanded?'md:w-12  lg:w-16 items-center':' md:w-52 lg:w-56 items-end'}  transition-all duration-500 ease-in-out  bg-[#6d28d9]`}>
+        <div className={`flex flex-col sticky justify-start h-screen ${!isExpanded?'md:w-12  lg:w-16 items-center':' md:w-52 lg:w-56 items-end'}  transition-all duration-500 ease-in-out  bg-[#6d28d9]`}>
           
           <ChevronRight className={`mt-10 ${isExpanded? 'hidden' : 'ml-0'}`}onClick={()=>{setIsExpanded(!isExpanded)}} ></ChevronRight>
          <ChevronLeft className={`mt-10 ${isExpanded? 'mr-10' : 'hidden'}`}onClick={()=>{setIsExpanded(!isExpanded)}} ></ChevronLeft>

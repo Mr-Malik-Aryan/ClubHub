@@ -14,6 +14,8 @@ import { Button } from "@/components/ui/button";
 import { Navbar } from "./_components/navbar";
 import { SideBar } from "./_components/sidebar";
 import FriendCard from "./_components/ChatCard";
+import Feed from "./_components/feed";
+import CreatePost from "./_components/createPost";
 export default function Home() {
   const { data: session, status } = useSession();
   async function logMeIn(UserData:UserInput) {
@@ -69,9 +71,11 @@ export default function Home() {
         <div className= "fixed z-20 h-full hidden md:flex  w-4/12">
           <SideBar />
         </div>
-        <div className="flex ml-20">
-        <div className="mt-10 w-2/12"> 
-        
+        <div className="flex md:ml-20 justify-center  ">
+       
+          <div className="flex flex-col md:w-5/12 justify-center w-full mt-16 bg-black  h-auto">
+          <CreatePost/>
+          <Feed/>
           </div>
         </div>
       </>

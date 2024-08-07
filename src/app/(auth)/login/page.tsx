@@ -120,7 +120,8 @@ export default function LoginForm() {
                 className="mb-1"
                 value={name}
                 onChange={(event) => {
-                  setName(event?.target.value);
+                  setName(event?.target.value)
+                  //console.log(name);
                 }}
               />
               <Label htmlFor="email">Email</Label>
