@@ -65,7 +65,7 @@ export default function LoginForm() {
   if (status === "unauthenticated") {
     return (
       <div className=" flex  h-screen w-full justify-center ">
-        <Card className="mt-20 border border-slate-800 rounded-xl  w-9/12 h-4/6 lg:w-1/2 max-w-lg justify-center  ">
+        <Card className="mt-20 border border-slate-800 rounded-xl  w-9/12 h-fit lg:w-1/2 max-w-lg justify-center  ">
           <div className="flex justify-between  ">
             <CardHeader>
               <CardTitle className="text-4xl font-semibold mb-8 text-center ml-10">
@@ -111,8 +111,8 @@ export default function LoginForm() {
             <hr className="opacity-15 mt-3 mr-20 w-3/12" />
             <hr className="opacity-15 mt-3 ml-20 w-3/12" />
           </div>
-          <CardFooter className="flex flex-col  w-full mt-6">
-            <div className="grid w-full max-w-sm items-center gap-1.5">
+          <CardFooter className="flex flex-col h-auto  w-full mt-6">
+            <div className="grid w-full max-w-sm  h-fit items-center gap-1.5">
               <Label htmlFor="username">Username</Label>
               <Input
                 id="username"
