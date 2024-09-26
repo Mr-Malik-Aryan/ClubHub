@@ -43,16 +43,16 @@ const SeparatorDemo=()=> {
 export const UserProfile=()=>{
   const { setTheme } = useTheme()
         const {data : session} =useSession();
-      
+      console.log(session?.user?.image)
     
         return(
         <Avatar>
-          
+
           <DropdownMenu  >
       <DropdownMenuTrigger asChild>
-       
-         <AvatarImage src={session?.user?.image||"https://img.freepik.com/free-vector/digital-technology-background-with-abstract-wave-border_53876-117508.jpg"}/>
-        
+      <AvatarImage className="absolute" src={session?.user?.image||"https://visualpharm.com/free-icons/user-595b40b65ba036ed117d26d4"}/>
+
+      
       </DropdownMenuTrigger>
       <DropdownMenuContent  className="mr-12 w-auto flex flex-col justify-center">
         <SeparatorDemo></SeparatorDemo>
@@ -60,8 +60,7 @@ export const UserProfile=()=>{
     <Button variant='destructive' className= 'mt-4' onClick={()=>signOut()}>Logout</Button>
   </DropdownMenuContent>
     </DropdownMenu>
-        
-    <AvatarFallback>{session?.user?.name?.slice(0,1)}</AvatarFallback>
+
    
           </Avatar>
      

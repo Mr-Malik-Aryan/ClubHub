@@ -20,7 +20,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { FaGithub } from "react-icons/fa";
-import logo from "../../../../public/CrossConnect.png";
 import { FaGoogle } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -64,12 +63,12 @@ export default function LoginForm() {
 
   if (status === "unauthenticated") {
     return (
-      <div className=" flex  h-screen w-full justify-center ">
-        <Card className="mt-20 border border-slate-800 rounded-xl  w-9/12 h-4/6 lg:w-1/2 max-w-lg justify-center  ">
+      <div className=" flex  h-screen w-full justify-center items-center">
+        <Card className=" border border-slate-800 rounded-xl  w-9/12 h-fit lg:w-1/2 max-w-lg justify-center  ">
           <div className="flex justify-between  ">
             <CardHeader>
               <CardTitle className="text-4xl font-semibold mb-8 text-center ml-10">
-                ClubHub
+                FeedCrunch
               </CardTitle>
               <CardTitle className="text-2xl font-medium mb-2 ">
                 Let's Get You in
@@ -86,16 +85,7 @@ export default function LoginForm() {
           <CardContent className=" flex mt-6 items-center">
             <Button
               variant="outline"
-              className="w-full mr-2"
-              onClick={() => signIn("github")}
-            >
-              {" "}
-              <FaGithub className="mr-2" />
-              Github
-            </Button>
-            <Button
-              variant="outline"
-              className="w-full ml-2"
+              className="w-full ml-2 h-14 text-xl"
               onClick={() => Google()}
             >
               {" "}
@@ -113,17 +103,7 @@ export default function LoginForm() {
           </div>
           <CardFooter className="flex flex-col  w-full mt-6">
             <div className="grid w-full max-w-sm items-center gap-1.5">
-              <Label htmlFor="username">Username</Label>
-              <Input
-                id="username"
-                type="text"
-                className="mb-1"
-                value={name}
-                onChange={(event) => {
-                  setName(event?.target.value)
-                  //console.log(name);
-                }}
-              />
+              
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"

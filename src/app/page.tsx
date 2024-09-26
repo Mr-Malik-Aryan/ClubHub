@@ -60,25 +60,39 @@ export default function Home() {
         exists: true,
       };
        logMeIn(UserData);
-       //console.log(UserData)
+
      
     
      }
     return (
-      <>
+    <div >
+      <div   className="HomepageHeroGradient hidden lg:flex" 
+  style={{ 
+    width: '100%', 
+    height: "20vh", 
+    position: 'absolute', 
+    top: '0px',
+    background: 'linear-gradient(45deg, #a960ee 0%, #ff333d 25%, #90e0ff 50%, #ffcb57 100%)',
+    transform: 'skewY(-5deg)',
+    overflow: 'hidden'
+  }} >
+       <Image src={"/download.png"}  alt="="  layout="fill"  objectFit="cover"></Image>
+       </div>
+       <div   className="HomepageHeroGradient  lg:hidden" 
+  style={{ 
+    width: '100%', 
+    height: "15vh", 
+    position: 'absolute', 
+    top: '0px',
+    background: 'linear-gradient(45deg, #a960ee 0%, #ff333d 25%, #90e0ff 50%, #ffcb57 100%)',
+    transform: 'skewY(-5deg)',
+    overflow: 'hidden'
+  }} >
+       <Image src={"/download.png"}  alt="="  layout="fill"  objectFit="cover"></Image>
+       </div>
         <Navbar />
-       
-        <div className= "fixed z-20 h-full hidden md:flex  w-4/12">
-          <SideBar />
         </div>
-        <div className="flex md:ml-20 justify-center  ">
-       
-          <div className="flex flex-col md:w-5/12 justify-center w-full mt-16 bg-black  h-auto">
-          <CreatePost/>
-          <Feed/>
-          </div>
-        </div>
-      </>
+      
     );
   } else
     return (

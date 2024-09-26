@@ -14,7 +14,7 @@ import {
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
-  const [click,setClick]= useState(true);
+  const [click,setClick]= useState(false);
 const handleClick=()=>{
   if (!click)
   {
